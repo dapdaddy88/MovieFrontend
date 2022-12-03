@@ -24,7 +24,7 @@ function AMovie() {
 
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get(`http://localhost:5000/movie/get/${id}`)
+    axios.get(`https://moviebackendcapstone.herokuapp.com/movie/get/${id}`)
       .then(response => {
         setMovie({
           title: response.data.movie.title,
@@ -55,7 +55,7 @@ function AMovie() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:5000/review/add', newReview)
+    axios.post('https://moviebackendcapstone.herokuapp.com/review/add', newReview)
       .then(response => {
         console.log(response);
         setIsEditMode(false);
@@ -76,7 +76,7 @@ function AMovie() {
     navigate('/');
   }
   const handleDeleteReview = (reviewId) => {
-    axios.delete(`http://localhost:5000/review/delete/${reviewId}`)
+    axios.delete(`https://moviebackendcapstone.herokuapp.com/review/delete/${reviewId}`)
       .then(response => {
         setDeleteRev(!deleteRev);
       })

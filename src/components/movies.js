@@ -18,7 +18,7 @@ export default class Movies extends Component {
 
   }
   getMovies() {
-    axios.get('http://localhost:5000/movie/get')
+    axios.get('https://moviebackendcapstone.herokuapp.com/movie/get')
       .then(response => {
         this.setState({
           movies: response.data

@@ -32,7 +32,7 @@ export class AddMovie extends Component {
       mpaa_rating: `${this.state.mpaa_rating}`
     }
 
-    axios.post('http://localhost:5000/movie/add', data)
+    axios.post('https://moviebackendcapstone.herokuapp.com/movie/add', data)
       .then(res => { console.log(res) })
       .catch(err => { console.error(err) })
   }
