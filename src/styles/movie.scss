@@ -1,0 +1,379 @@
+  .header-container {
+    width: 100vw;
+    height: 150px;
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
+
+    h1 {
+      color: $primaryFColor;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      text-shadow: 0px 3px 3px rgba(22, 22, 22, 0.825);
+    }
+  }
+
+  .movies-container {
+    width: 100vw;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .movies-box {
+      height: 100%;
+      width: 80vw;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0;
+    }
+
+
+    .movie-card {
+      height: 400px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: space-evenly;
+      background-color: $tertiaryColor;
+      color: $primaryFColor;
+      position: relative;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
+      border-radius: 7px;
+
+      h3 {
+        padding-top: 10px;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        text-shadow: 0px 3px 3px rgba(22, 22, 22, 0.852);
+      }
+
+      img {
+        height: 250px;
+        width: 250px;
+      }
+
+      .star {
+        color: yellow;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        text-shadow: 0px 3px 3px rgba(22, 22, 22, 0.886);
+      }
+
+      .hover-btns {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+        padding: 5px 0;
+
+        button {
+          background-color: $primaryColor;
+          border: none;
+          border-radius: 7px;
+          height: 35px;
+          width: 50px;
+          font-weight: 600;
+          color: $primaryFColor;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            box-shadow: 0px 0px 2px 3px rgba(255, 254, 254, 0.344)
+          }
+        }
+      }
+
+      .review-button{
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: $primaryColor;
+        border: none;
+        border-radius: 7px;
+        font-weight: 600;
+        color: $primaryFColor;
+        transition: all 0.2s ease-in-out;
+        text-decoration: none;
+
+        &:hover {
+          box-shadow: 0px 0px 2px 3px rgba(255, 254, 254, 0.344)
+        }
+      }
+    }
+
+    .edit-form {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $primaryColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 7px;
+
+      form {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        input {
+          width: 50%;
+          height: 20px;
+          border-radius: 7px;
+        }
+
+        label {
+          text-align: left;
+          padding: 5px;
+        }
+
+        button {
+          background-color: $tertiaryColor;
+          color: $primaryFColor;
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  .add-movie-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: $primaryColor;
+    color: $primaryFColor;
+    box-shadow: 0px -4px -4px 0px rgba(0, 0, 0, 0.24);
+
+    form {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 50%;
+        height: 20px;
+      }
+
+      label {
+        text-align: left;
+        padding: 5px 0;
+        text-shadow: 0px 3px 3px rgba(22, 22, 22, 0.852);
+      }
+
+      button {
+        margin-top: 10px;
+        background-color: $tertiaryColor;
+        color: $primaryFColor;
+        height: 40px;
+        width: 25%;
+        border-radius: 7px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          box-shadow: 0px 0px 2px 3px rgba(255, 254, 254, 0.344)
+        }
+      }
+    }
+  }
+
+  .a-movie-container {
+    margin-top: 20px;
+    width: 99vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .edit-form {
+      width: 50%;
+      height: 100%;
+      background-color: $primaryColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 7px;
+      color: $primaryFColor;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
+
+      form {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+        input {
+          width: 50%;
+          height: 20px;
+          border-radius: 7px;
+        }
+
+        label {
+          text-align: left;
+          padding: 5px;
+        }
+
+        button {
+          background-color: $tertiaryColor;
+          color: $primaryFColor;
+          height: 25px;
+          margin-top:10px;
+        }
+      }
+    }
+
+    .back-btn {
+      background-color: $primaryColor;
+      color: $primaryFColor;
+      height: 40px;
+      width: 80px;
+      border-radius: 7px;
+      border: 0;
+      transition: all 0.3s ease-in-out;
+      margin: 10px;
+      align-self: flex-start;
+
+      &:hover {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
+      }
+    }
+
+    .a-movie-box {
+     background-color: $tertiaryColor;
+      width: 60vw;
+      height: 45vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      border-radius: 7px;
+      color: $primaryFColor;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
+
+      .stars {
+        color: yellow;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        text-shadow: 0px 3px 3px rgba(22, 22, 22, 0.886);
+      }
+        
+      img {
+          height: 250px;
+          width: 250px;
+        }
+    }
+
+    .add-review-btn {
+      background-color: $primaryColor;
+      color: $primaryFColor;
+      height: 40px;
+      width: 25%;
+      border-radius: 5px;
+      margin: 2x;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.344);
+      }
+    }
+
+    .movie-review-container {
+      width: 100vw;
+      min-height: 50vh;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      .a-review {
+        margin: 20px;
+        background-color: $tertiaryColor;
+        width: 60vw;
+        min-height: 10vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
+        color: $primaryFColor;
+
+        .stars {
+          color: yellow;
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          background-clip: text;
+          text-shadow: 0px 3px 3px rgba(22, 22, 22, 0.886);
+        }
+
+        .delete-review {
+          position: absolute;
+          top: 10;
+          right: 10%;
+
+          button {
+            background-color: $primaryColor;
+            color: $primaryFColor;
+            height: 40px;
+            width: 35px;
+            border-radius: 5px;
+            border: 0px;
+            margin: 2x;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.344);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .add-movie-btn {
+    background-color: $primaryColor;
+    color: $primaryFColor;
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .x-button {
+    background-color: $tertiaryColor;
+    color: $primaryFColor;
+    height: 20px;
+    width: 20px;
+  }
